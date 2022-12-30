@@ -1,0 +1,54 @@
+.headerContainer { 
+  height: 6rem;
+  background-color: #141a29;  
+
+  .headerContent {  
+    max-width: 1120px; 
+    width: 100%;  
+    height: 6rem;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+
+    .headerContentChild { 
+      display: flex;
+      justify-content: space-between;
+      align-items: center; 
+
+        img { 
+          cursor: pointer;
+        } 
+    
+        nav { 
+          margin: 0 2.812rem; 
+          display: flex;  
+    
+          ul { 
+            display: flex;  
+            gap: 2.25rem;  
+
+            li { 
+              color: #fff;  
+            }
+          }
+        }
+    } 
+
+    div { 
+      button { 
+        display: flex; 
+        align-items: center;
+        gap: 10px; 
+        background-color: transparent; 
+        color: #fff;  
+        border: none;  
+
+        img { 
+          width: 1.75rem; 
+          height: 1.75rem; 
+        }
+      }
+    }
+  }
+}
