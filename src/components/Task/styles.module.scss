@@ -1,0 +1,54 @@
+.containerTask {
+  width: 100%; 
+  padding: 21px;  
+  background-color: #20212C; 
+  border-radius: 14px; 
+
+  p {
+    font-size: 20px; 
+    color: #F2F6FC; 
+    margin-bottom: 20px; 
+    cursor: pointer; 
+    line-height: 150%; 
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+
+    .calendar { 
+      display: flex;
+      align-items: center; 
+      justify-content: center;   
+      
+      div { 
+        margin-right: 20px; 
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        gap: 10px; 
+        color:#FFB800;  
+
+        img {
+          margin-top: -6px; 
+        }
+      }  
+    } 
+
+    .trash, .edit {  
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      gap: 5px; 
+      color: #F2F6FC; 
+      background-color: transparent; 
+      border: none; 
+
+      img {
+        margin-top: -3px;  
+        margin-right: 0px;  
+      }
+    }
+  }
+}

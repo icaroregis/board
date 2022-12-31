@@ -1,0 +1,34 @@
+.containerInput {
+  display: flex;  
+  gap: 14px;
+
+  input {
+    width: 100%; 
+    padding-left: 20px; 
+    height: 60px; 
+    border-radius: 14px; 
+    background-color: #20212C; 
+    border: 1px solid #424242;  
+    color: #F2F6FC; 
+    font-size: 20px; 
+
+    &::placeholder {  
+      color: #F2F6FC; 
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 60px;
+    width: 94px;  
+    border-radius: 14px; 
+    background-color: #FFB800; 
+    border: none; 
+
+    &:hover { 
+      filter: brightness(0.8); 
+    }
+  }
+}
