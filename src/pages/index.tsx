@@ -2,6 +2,12 @@ import styles from '../styles/styles.module.scss';
 import Head from 'next/head';
 
 export default function Home() {
+  const arrayImages = [
+    { id: 1, src: 'https://avatars.githubusercontent.com/u/62527468?v=4', alt: 'Foto do apoidor' },
+    { id: 2, src: 'https://avatars.githubusercontent.com/u/62527468?v=4', alt: 'Foto do apoidor' },
+    { id: 3, src: 'https://avatars.githubusercontent.com/u/62527468?v=4', alt: 'Foto do apoidor' },
+  ];
+
   return (
     <>
       <Head>
@@ -23,10 +29,14 @@ export default function Home() {
           <h3>Apoiadores:</h3>
 
           <div className={styles.containerPhotoSupporters}>
-            <img src="https://avatars.githubusercontent.com/u/62527468?v=4" alt="Foto dos apoiadores da ferramenta" />
-            <img src="https://avatars.githubusercontent.com/u/62527468?v=4" alt="Foto dos apoiadores da ferramenta" />
-            <img src="https://avatars.githubusercontent.com/u/62527468?v=4" alt="Foto dos apoiadores da ferramenta" />
-            <img src="https://avatars.githubusercontent.com/u/62527468?v=4" alt="Foto dos apoiadores da ferramenta" />
+            {arrayImages.length > 0 &&
+              arrayImages.map((image) => {
+                return (
+                  <div key={image.id}>
+                    <img src={image.src} alt={image.alt} />
+                  </div>
+                );
+              })}
           </div>
         </div>
       </main>
