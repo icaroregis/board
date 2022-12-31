@@ -8,9 +8,9 @@ export default function Home() {
         <title>Board - Organização de tarefas</title>
       </Head>
 
-      <div>
-        <h1 className={styles.title}>Primeiro projeto NextJs</h1>
-      </div>
+      <main>
+        <img src="/images/board-user.svg" alt="Imagem de um computador" />
+      </main>
     </>
   );
 }

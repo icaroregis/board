@@ -1,12 +1,13 @@
 import styles from './styles.module.scss';
 import NextLink from '../Link';
+import SignInButton from '../SignInButton';
 
 export default function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
         <div className={styles.headerContentChild}>
-          <NextLink href="/" title="" img="/images/logo.svg" alt="Logo da aplicação" />
+          <NextLink href="/" img="/images/logo.svg" alt="Logo da aplicação" />
 
           <nav>
             <ul>
@@ -21,11 +22,7 @@ export default function Header() {
           </nav>
         </div>
 
-        <div>
-          <button>
-            <img src="/images/githubicon.png" alt="" /> Entrar com Github
-          </button>
-        </div>
+        <SignInButton src="/images/githubicon.png" alt="Icone do github" title="Entrar com Github" />
       </div>
     </header>
   );

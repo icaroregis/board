@@ -1,0 +1,26 @@
+.signInButton, .signInButtonLogin {   
+  display: flex; 
+  align-items: center;
+  gap: 10px; 
+  background-color: transparent;   
+  color: #fff;  
+  border: none;   
+  transition: filter 0.2s;   
+
+  img { 
+    width: 1.75rem;  
+    height: 1.75rem; 
+  }
+
+  &:hover {
+    filter: brightness(0.8); 
+  }
+}
+
+.signInButtonLogin { 
+  img:first-child { 
+    width: 3rem;    
+    height: 3rem;  
+    border-radius: 50%;  
+  }
+}
