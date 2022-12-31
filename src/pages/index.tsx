@@ -12,7 +12,7 @@ export default function Home() {
         <img src="/images/board-user.svg" alt="Imagem de um computador" />
 
         <section className={styles.callToAction}>
-          <h1>Uma ferramenta para seu dia a dia Escreva, planeje e organize-se..</h1>
+          <h1>Uma ferramenta para seu dia a dia Escreva, planeje e organize-se.</h1>
 
           <p>
             <span>100% Gratuita</span> e online.
