@@ -1,5 +1,10 @@
 import NextLink from 'next/link';
 
-export default function Link({ href, title }) {
-  return <NextLink href={href}>{title}</NextLink>;
+export default function Link({ href, title, img = '', alt = '', ...rest }) {
+  return (
+    <NextLink href={href} {...rest}>
+      {title}
+      {img !== '' && alt !== '' && <img src={img} alt={alt} />}
+    </NextLink>
+  );
 }
