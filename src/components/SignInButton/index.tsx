@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { signIn, signOut, useSession } from 'next-auth/react';
 import styles from './styles.module.scss';
 
 export default function SignInButton({ src, alt, title }) {
-  const [session, setSession] = useState(true);
+  const { data: session } = useSession();
+
+  console.log(session);
 
   return (
     <>
       {session ? (
         <div>
-          <button className={styles.signInButtonLogin} type="button" onClick={() => {}}>
+          <button className={styles.signInButtonLogin} type="button" onClick={() => signOut()}>
             <img src="https://avatars.githubusercontent.com/u/62527468?v=4" alt="Foto do usuário" />
             Olá Ícaro, seja bem vindo!
             <img src="images/button-closed.svg" alt="ícone de deslogar" />
@@ -16,9 +18,17 @@ export default function SignInButton({ src, alt, title }) {
         </div>
       ) : (
         <div>
-          <button className={styles.signInButton} type="button" onClick={() => {}}>
+          <a
+            href={`/api/auth/signin`}
+            className={styles.signInButton}
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              signIn();
+            }}
+          >
             <img src={src} alt={alt} /> {title}
-          </button>
+          </a>
         </div>
       )}
     </>
